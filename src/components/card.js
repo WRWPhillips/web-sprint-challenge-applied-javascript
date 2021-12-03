@@ -5,17 +5,18 @@ const Card = (article) => {
   const headLineDiv = document.createElement("div");
   cardDiv.appendChild(headLineDiv);
   headLineDiv.classList.add("headline");
-  headLineDiv.textContent = `${article.headline}`;
+  headLineDiv.textContent = article.headline;
   const authorDiv = document.createElement("div");
   cardDiv.appendChild(authorDiv);
   const imgDiv = document.createElement("div");
   imgDiv.classList.add("img-container");
   authorDiv.appendChild(imgDiv);
+  authorDiv.classList.add("author");
   const authorImg = document.createElement("img");
-  authorImg.src = `${article.authorPhoto}`;
+  authorImg.src = article.authorPhoto;
   imgDiv.appendChild(authorImg);
   const creditSpan = document.createElement("span");
-  creditSpan.textContent = `By ${article.authorName}`;
+  creditSpan.textContent = "By " + article.authorName;
   authorDiv.appendChild(creditSpan);
   cardDiv.addEventListener('click', () =>{
     console.log(headLineDiv.textContent)

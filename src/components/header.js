@@ -1,3 +1,4 @@
+import axios from 'axios';
 const Header = (title, date, temp) => {
   // TASK 1
   // ---------------------

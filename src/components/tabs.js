@@ -22,6 +22,7 @@ const Tabs = (topics) => {
     tabDiv.classList.add("tab");
     tabDiv.textContent = topics[element];
     topicsDiv.appendChild(tabDiv);
+    return topicsDiv;
   });
 }
 

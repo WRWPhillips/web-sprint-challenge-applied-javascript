@@ -21,9 +21,10 @@ const Header = (title, date, temp) => {
   const titleHeader = document.createElement("h1");
   headerDiv.appendChild(titleHeader);
   titleHeader.textContent = `${title}`;
-  const tempSpan = document.appendChild("span");
+  const tempSpan = document.createElement("span");
   tempSpan.classList.add("temp");
   tempSpan.textContent = `${temp}`;
+  headerDiv.appendChild(tempSpan);
   return headerDiv;
 }
 

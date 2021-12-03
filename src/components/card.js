@@ -47,7 +47,7 @@ const cardAppender = (selector) => {
     console.log(resp.data);
     const getData = resp;
     const receiver = document.querySelector('.cards');
-    receiver.appendChild(cardMaker(getData));
+    receiver.appendChild(Card(getData));
   }).catch(error =>{
     console.error(error);
   }).finally(() => console.log("working"));

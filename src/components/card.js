@@ -26,11 +26,10 @@ const Card = (article) => {
 const cardAppender = (selector) => {
   axios.get('http://localhost:5000/api/articles').then(resp =>{
     for(let i = 0; i<Object.keys(resp.data.articles).length; i++){
-      resp.data.articles[Object.keys(resp.data.articles)[i]].forEach(art =>{
-        document.querySelector(selector).append(Card(art))
+      resp.data.articles[Object.keys(resp.data.articles)[i]].forEach(e =>{
+        document.querySelector(selector).append(Card(e))
       })
     }
-    console.log(resp)
   })
 }
 
